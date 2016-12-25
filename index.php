@@ -10,6 +10,21 @@
 
 <body>
 
+<div id="topMenu">
+    <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Strona główna"><?php bloginfo( 'name' ); ?></a>
+
+    <ul id="tagMenu">
+        <li><strong>tagi\&gt;</strong>
+
+            <ul id="tagSubmenu">
+                <li><?php nethut_tag_cloud(); ?></li>
+            </ul>
+        </li>
+    </ul>
+
+    <a class="rss" href="<?php echo get_feed_link(); ?>" title="RSS Feed">rss</a>
+</div>
+
 <div id="container">
 <div id="listing">
 <?php while ( have_posts() ) : the_post(); ?>
