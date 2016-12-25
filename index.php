@@ -23,6 +23,10 @@
 </div>
 </div>
 
+<div id="sidebar">
+    <?php dynamic_sidebar( 'sidebar-right-column' ); ?>
+</div>
+
 <div id="footer">
     <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 
