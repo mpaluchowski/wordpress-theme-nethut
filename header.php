@@ -45,4 +45,6 @@
             'menu_id' => 'pageMenu',
         ) );
     ?>
+
+    <?php if ( is_singular() ): echo "<h1>" . get_the_title() . "</h1>"; endif; ?>
 </div>
