@@ -15,6 +15,10 @@
     <div id="text">
         <?php the_content( "", true ); ?>
     </div>
+
+    <div class="textFooter">
+        <?php next_post_link( "%link", "Następny: %title" ); ?>
+    </div>
 </div>
 
 <div id="sidebar">
