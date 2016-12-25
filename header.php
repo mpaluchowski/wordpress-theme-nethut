@@ -15,6 +15,7 @@
 
     <ul id="tagMenu">
         <li><strong>tagi\&gt;</strong>
+            <?php if ( is_single() ): the_tags( "" ); endif; ?>
 
             <ul id="tagSubmenu">
                 <li><?php nethut_tag_cloud(); ?></li>
