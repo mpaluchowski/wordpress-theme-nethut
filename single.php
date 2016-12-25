@@ -17,4 +17,8 @@
     </div>
 </div>
 
+<div id="sidebar">
+    <?php dynamic_sidebar( 'sidebar-right-column' ); ?>
+</div>
+
 <?php get_footer(); ?>
