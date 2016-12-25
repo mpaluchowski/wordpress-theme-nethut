@@ -36,6 +36,16 @@
     </form>
 </div>
 
+<div id="title">
+    <?php
+        wp_nav_menu( array(
+            'theme_location' => 'main',
+            'depth' => 1,
+            'menu_id' => 'pageMenu',
+        ) );
+    ?>
+</div>
+
 
 <div id="container">
 <div id="listing">

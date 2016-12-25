@@ -9,6 +9,10 @@ function nethut_setup() {
         'flex-height' => true,
         'header-text' => false
     ] );
+
+    register_nav_menus( array(
+        'main' => __( 'Main Menu', 'nethut' ),
+    ) );
 }
 add_action( 'after_setup_theme', 'nethut_setup' );
 
