@@ -2,6 +2,13 @@
 function nethut_setup() {
     add_theme_support( 'title-tag' );
     add_theme_support( 'automatic-feed-links' );
+
+    add_theme_support( 'custom-header', [
+        'uploads' => true,
+        'flex-width' => true,
+        'flex-height' => true,
+        'header-text' => false
+    ] );
 }
 add_action( 'after_setup_theme', 'nethut_setup' );
 

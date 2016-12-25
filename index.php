@@ -25,6 +25,18 @@
     <a class="rss" href="<?php echo get_feed_link(); ?>" title="RSS Feed">rss</a>
 </div>
 
+<div id="header">
+    <a id="headimg" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
+
+    <form id="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+    <fieldset>
+        <input type="text" class="query" value="Szukaj..." name="s" onfocus="if (this.value == 'Szukaj...') this.value='';" onblur="if (this.value == '') this.value='Szukaj...';" />
+        <input type="image" class="button" src="<?php echo get_parent_theme_file_uri( '/img/search.png' ); ?>" alt="Submit button" />
+    </fieldset>
+    </form>
+</div>
+
+
 <div id="container">
 <div id="listing">
 <?php while ( have_posts() ) : the_post(); ?>
