@@ -31,6 +31,9 @@ function nethut_widgets_init() {
 }
 add_action( 'widgets_init', 'nethut_widgets_init' );
 
+/* Disable comments feed */
+add_filter( 'feed_links_show_comments_feed', '__return_false' );
+
 function nethut_tag_cloud( $before = null, $sep = ', ', $after = '' ) {
     $tags = get_terms( array(
         'taxonomy' => 'post_tag',
