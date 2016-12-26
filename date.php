@@ -24,7 +24,7 @@ if ( is_date() ) {
 
 <div id="sidebar">
     <ul class="rssMenu">
-        <?php wp_get_archives( 'type=monthly' ); ?>
+        <?php wp_get_archives( ['type' => 'monthly'] ); ?>
     </ul>
     <?php dynamic_sidebar( 'sidebar-right-column' ); ?>
 </div>
