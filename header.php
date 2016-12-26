@@ -47,4 +47,5 @@
     ?>
 
     <?php if ( is_singular() ): echo "<h1>" . get_the_title() . "</h1>"; endif; ?>
+    <?php if ( is_tag() ): echo "<h1>Tag: " . single_tag_title( "", false ) . "</h1>"; endif; ?>
 </div>
