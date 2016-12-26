@@ -45,3 +45,26 @@ function nethut_tag_cloud( $before = null, $sep = ', ', $after = '' ) {
     );
     echo $before . implode( $sep, $tagLinks ) . $after;
 }
+
+/**
+* Display just the post summary, up to the <code><!--more--></code> link, or if
+* that one's not found, display Wordpress's generated excerpt.
+*/
+function nethut_post_summary() {
+    global $page, $pages;
+
+    if ( $page > count( $pages ) ) { // if the requested page doesn't exist
+        $page = count( $pages );
+    }
+
+    $content = $pages[$page - 1];
+    if ( preg_match( '/<!--more(.*?)?-->/', $content, $matches ) ) {
+        $content = explode( $matches[0], $content, 2 )[0];
+    } else {
+        $content = get_the_excerpt();
+    }
+
+    $content = apply_filters( 'the_content', $content );
+    $content = str_replace( ']]>', ']]&gt;', $content );
+    echo $content;
+}

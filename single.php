@@ -4,7 +4,7 @@
     <?php the_post(); ?>
 
     <div class="summary">
-        <?php the_excerpt(); ?>
+        <?php nethut_post_summary(); ?>
     </div>
 
     <div class="signature">
